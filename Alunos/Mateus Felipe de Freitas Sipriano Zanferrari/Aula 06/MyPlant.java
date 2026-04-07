@@ -33,7 +33,10 @@ public class MyPlant {
             System.out.println("5- Consultar Vendedores");
             System.out.println("6- Consultar Clientes");
             System.out.println("7- Consultar dados da Loja");
-            System.out.println("8- Sair");
+            System.out.println("8- Calcular Média Salarial Vendedores");
+            System.out.println("9- Calcular Bonus Vendedores");
+            System.out.println("10- Voltar ao Menu de Seleção de Loja");
+            System.out.println("0- Encerrar Programa");   
 
             escolha = scan.nextInt();
 
@@ -127,6 +130,28 @@ public class MyPlant {
                     break;
 
                 case 8:
+                    System.out.println("\n--- Média Salarial dos Vendedores ---");  
+                    for (Vendedor v : lojaAtual.vendedores) {
+                        System.out.println("\nVendedor: " + v.nome);
+                        v.calcularMedia();
+                    }
+                    break;
+                    
+                case 9:
+                    System.out.println("\n--- Bonus dos Vendedores ---");  
+                    for (Vendedor v : lojaAtual.vendedores) {
+                        System.out.println("\nVendedor: " + v.nome);
+                        v.calcularBonus();
+                    }
+                    break;
+                    
+                case 10:
+                    System.out.println("Voltando ao menu de seleção de loja...\n");
+                    main(args); // Chama o método main para reiniciar o processo de seleção de loja
+                    return; // Encerra o método atual para evitar execução adicional    
+                    
+
+                case 0:
                     System.out.println("Encerrando o programa. Obrigado por usar o Sistema!"); 
                     break;
 
@@ -135,7 +160,7 @@ public class MyPlant {
                     break; 
             }
 
-        } while (escolha != 8);
+        } while (escolha != 10 && escolha != 0);
 
         scan.close();
     }

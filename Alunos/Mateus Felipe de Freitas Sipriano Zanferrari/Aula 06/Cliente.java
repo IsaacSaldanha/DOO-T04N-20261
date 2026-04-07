@@ -14,6 +14,7 @@ public class Cliente {
         this.rua = rua;
     }
     public void apresentarCliente(){
-        System.out.println("Nome do cliente: " + nome + "e sua idade é: " + idade + "anos");
+        System.out.println("Nome do cliente: " + nome);
+        System.out.println("Idade: " + idade + " anos");
     }
 }

@@ -26,7 +26,7 @@ public class Vendedor {
     
     public  void apresentarVendedor(){
         System.out.println("Nome do vendedor: " + nome);
-        System.out.println("0Idade: " + idade + " anos");
+        System.out.println("Idade: " + idade + " anos");
     }
 
     public void calcularMedia() {
