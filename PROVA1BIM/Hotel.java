@@ -1,4 +1,4 @@
-public class Hotel {
+public class Hotel { //gerencia do sistema
     private Reserva[] reservas;
     private int totalReservas;
 
